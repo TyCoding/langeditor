@@ -1,0 +1,10 @@
+import { EditorState, Transaction } from "@tiptap/pm/state";
+import type { Command } from "@tiptap/core";
+export declare const LINE_HEIGHT_100 = 1.7;
+export declare const DEFAULT_LINE_HEIGHT = "100%";
+export declare const ALLOWED_NODE_TYPES: string[];
+export declare function isLineHeightActive(state: EditorState, lineHeight: string): boolean;
+export declare function transformLineHeightToCSS(value: string | number): string;
+export declare function transformCSStoLineHeight(value: string): string;
+export declare function setTextLineHeight(tr: Transaction, lineHeight: string | null): Transaction;
+export declare function createLineHeightCommand(lineHeight: string): Command;
